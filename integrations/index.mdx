@@ -1,0 +1,111 @@
+---
+title: "Integrations"
+---
+
+## Browser Extension
+
+### Why Integrate?
+
+- Today's browser is a major data exfiltration channel, commonly used to upload sensitive data to GenAI applications, shadow storage, and other services.
+- The browser extension gives Orion visibility into user actions performed in the browser, such as web uploads and downloads.
+
+## Okta
+
+### Why Integrate?
+
+- Enrich traces and detections by providing more context about the user responsible for the detection.
+- For example: [john@example.com](mailto:john@example.com) from the CS department downloaded source code from the company’s GitHub to his personal mobile device. This is an anomaly that should be flagged and we can surface it by integrating with Okta.
+- Having access to your company’s Okta environment would enable us to provide additional context about [john@example.com](mailto:john@example.com) and detect anomalies like this:
+- His job title, department, the groups he belongs to, etc.
+- Take into account if he’s in leavers or risky employees group.
+- Information about his manager, with the ability to notify them about the detection.
+- Map out your data sources from the SSO connected services and monitor sensitive data from them.
+
+## AWS
+
+### Why Integrate?
+
+- Integrating AWS with Orion Security enhances your ability to monitor sensitive data activity within your cloud environment.
+- **CloudTrail and S3** - This integration enables proactive detection of potential data exfiltration or misuse by ingesting AWS logs, including CloudTrail and CloudWatch events. Orion Security then analyzes these logs to identify and alert on suspicious data movement events.
+
+## MDM - Kandji, Jamf, Intune, etc.
+
+### Why Integrate?
+
+- Integrating with your MDM will further enrich the data in Orion’s platform.
+- It correlates endpoint events with the users who performed them.
+- It also fills data gaps from various integrations and helps Orion make better connections between related events.
+
+## Microsoft 365
+
+### Why Integrate?
+
+- If your company uses Microsoft services like OneDrive, SharePoint, Copilot, and Exchange, integrating with your M365 suite allows Orion to receive events from those services.
+- Monitor and prevent sensitive data outgoing by Exchange.
+- Monitor and prevent sensitive data access and sharing from OneDrive and SharePoint.
+- Read and use your organizations sensitive data labels (Microsoft Information Protection).
+- Enables Orion’s platform the ability to protect your data by revoking access if a file was over-shared
+- Integrate with Intune and Entra if you use them as your MDM and IDP.
+
+## Google Drive
+
+### Why Integrate?
+
+- In today’s world, most companies use Google Drive to store sensitive data like: employee data, customer data, contracts, reports, code artifacts and much more.
+- Integrating with your Google Drive enables Orion to monitor and prevent sensitive data access and sharing from Google Drive.
+- Read and use your organizations sensitive data labels if present.
+- Enables Orion’s platform the ability to protect your data by revoking access if a file was over-shared
+
+## Gmail
+
+### Why Integrate?
+
+- Integration with your company’s Gmail gives Orion visibility and preventing capabilities to protect your sensitive data from reaching outsiders
+
+## Salesforce
+
+### Why Integrate?
+
+- Integrating with your Salesforce enables Orion further visibility to monitor access and over-sharing of sensitive data.
+- If you don’t have our browser extension installed, or if a user downloaded sensitive data to an unmanaged device, this SaaS integration completes the gap.
+
+## Slack
+
+### Why Integrate?
+
+- The integration with Slack enables monitoring and preventing sensitive information from being shared through messages or file uploads.
+- This helps organizations maintain control over their confidential data while allowing teams to collaborate effectively.
+
+## GitHub
+
+### Why Integrate?
+
+- For most companies, GitHub contains their most valuable asset: the codebase. This represents one of the highest potential security risks that could severely damage a company. Despite this, many companies lack proper protection—a departing employee can easily download all company code as a ZIP file, or someone might accidentally grant public access.
+- Integrating with GitHub enables Orion to gain visibility and protect sensitive data from the company's repositories, even when accessed from an unmanaged device.
+
+## Endpoint Sensor
+
+### Why Integrate?
+
+- Orion Sensor can help monitor, detect and respond to endpoint exfiltration events.
+- The main use case for deploying the sensor is to handle events on desktop applications (upload a file to personal apps such as Dropbox)
+- The sensor also gives extra visibility into users actions on the endpoint such as file renames and copy-paste events, which can help surface anomalies and deviations.
+
+## EDR - Crowdstrike, Cortex, etc.
+
+### Why Integrate?
+
+- Use events from the EDR as an alternative to installing a sensor.
+- Enriching Orion’s AI engine with events and anomalies from the endpoints.
+- Deleting sensitive data from endpoints as part of a detection or policy.
+
+## SASE - Cato, Prisma, etc.
+
+### Why Integrate?
+
+- In order to gain more visibility and traces in Orion platform, an integration to your SASE vendor can amplify Orion’s solution.
+- Network traffic, mostly outbound can add the visibility of all file upload to unmanaged services and devices from the managed devices of the company.
+- Examples:
+  - Upload to personal dropbox
+  - Exfiltration through personal email
+  - Proprietary code to ChatGPT
